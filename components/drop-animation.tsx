@@ -1,4 +1,6 @@
 
+'use client';
+
 import "@/styles/drop-animation.css";
 function DropAnimation() {
     return (

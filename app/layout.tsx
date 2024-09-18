@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
-import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import WalletProvider from "@/hooks/wagmi-provider";
+import Header from '@/components/header';
+import "@/styles/globals.css";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "VeriDocx",
   description: "Verifiable documents and authentication",
+  icons: "logo.png"
 };
 
 export default function RootLayout({
@@ -24,7 +26,10 @@ export default function RootLayout({
         fontSans.variable
       )}>
         <WalletProvider>
-          {children}
+          <>
+            <Header />
+            {children}
+          </>
         </WalletProvider>
       </body>
     </html>

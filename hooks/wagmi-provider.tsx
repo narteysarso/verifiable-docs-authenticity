@@ -35,7 +35,7 @@ const WalletProvider = ({ children }: { children: React.ReactNode }) => {
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>
                 <RainbowKitProvider>
-                    <ThirdwebProvider >
+                    <ThirdwebProvider clientId={process.env.NEXT_PUBLIC_THIRD_WEB_CLIENT_ID} secretKey={process.env.NEXT_PUBLIC_THIRD_WEB_SECRET} >
                         {children}
                     </ThirdwebProvider>
                 </RainbowKitProvider>

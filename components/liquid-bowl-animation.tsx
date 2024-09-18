@@ -1,3 +1,5 @@
+'use client';
+
 import "@/styles/liquid-bowl-animation.css";
 function LiquidBowlAnimation() {
     return (
